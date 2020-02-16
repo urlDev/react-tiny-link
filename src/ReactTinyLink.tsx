@@ -37,11 +37,11 @@ const fetchUrl = (
     .catch((err: any) => {
       onError(err)
       setData({
-        title: url.substring(url.lastIndexOf('/') + 1),
-        description: url.substring(url.lastIndexOf('/') + 1),
+        // title: url.substring(url.lastIndexOf('/') + 1),
+        // description: url.substring(url.lastIndexOf('/') + 1),
         image: defaultMedia ? [defaultMedia] : [],
         url: url,
-        video: defaultMedia ? [defaultMedia] : [],
+        // video: defaultMedia ? [defaultMedia] : [],
         type: ReactTinyLinkType.TYPE_DEFAULT,
       })
       setLoading(false)
@@ -53,7 +53,7 @@ export const ReactTinyLink: React.FC<IReactTinyLinkProps> = ({
   maxLine = 2,
   minLine = 1,
   header = null,
-  description = null,
+  // description = null,
   url = '',
   width = '640px',
   proxyUrl = 'https://cors-anywhere.herokuapp.com',
@@ -64,8 +64,8 @@ export const ReactTinyLink: React.FC<IReactTinyLinkProps> = ({
   onSuccess = () => { },
 }: IReactTinyLinkProps) => {
   const [data, setData] = React.useState({
-    title: null,
-    description: null,
+    // title: null,
+    // description: null,
     image: null,
     type: null,
     video: [],

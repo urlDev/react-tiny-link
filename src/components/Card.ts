@@ -91,63 +91,63 @@ Media.defaultProps = {
   placeholderBg: `rgb(225, 232, 235)`,
 }
 
-export const Video = styled('video')`
-width:100%;
-display: block;
-height: 100%;
-    position: relative;
-    flex: ${({ cardSize }) => (isLarge(cardSize) ? '1 1 0%;' : '0 0 125px;')}
-    overflow: hidden;
-object-fit:cover
-`
+// export const Video = styled('video')`
+// width:100%;
+// display: block;
+// height: 100%;
+//     position: relative;
+//     flex: ${({ cardSize }) => (isLarge(cardSize) ? '1 1 0%;' : '0 0 125px;')}
+//     overflow: hidden;
+// object-fit:cover
+// `
 
-export const ContentWrapper = styled('div')`
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  flex: 1;
-  padding: 10px 15px;
-  min-width: 0;
-  box-sizing: border-box;
-  ${({ cardSize }) => isLarge(cardSize) && largeContentStyle};
-`
+// export const ContentWrapper = styled('div')`
+//   display: flex;
+//   justify-content: space-around;
+//   flex-direction: column;
+//   flex: 1;
+//   padding: 10px 15px;
+//   min-width: 0;
+//   box-sizing: border-box;
+//   ${({ cardSize }) => isLarge(cardSize) && largeContentStyle};
+// `
 
-export const Header = styled('header')`
-  text-align: left;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  flex-grow: 1.2;
+// export const Header = styled('header')`
+//   text-align: left;
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 0;
+//   flex-grow: 1.2;
 
-  ${({ cardSize }) => (!isLarge(cardSize) ? smallDescriptionStyle : largeDescriptionStyle)};
-`
-export const Content = styled('div')`
-  text-align: left;
-  font-size: 14px;
-  flex-grow: 1;
-  margin: auto 0;
-  line-height: 18px;
+//   ${({ cardSize }) => (!isLarge(cardSize) ? smallDescriptionStyle : largeDescriptionStyle)};
+// `
+// export const Content = styled('div')`
+//   text-align: left;
+//   font-size: 14px;
+//   flex-grow: 1;
+//   margin: auto 0;
+//   line-height: 18px;
 
-  ${({ cardSize }) => (!isLarge(cardSize) ? smallDescriptionStyle : largeDescriptionStyle)};
-`
+//   ${({ cardSize }) => (!isLarge(cardSize) ? smallDescriptionStyle : largeDescriptionStyle)};
+// `
 
-export const Description = styled('p')<{ loading: boolean }>`
-  &&& {
-    text-align: inherit;
-    font-weight: inherit;
-    font-family: inherit;
-    color: inherit;
-    margin: 0;
-    ${({ loading }) => loading && loadingStyle}
-  }
-`
+// export const Description = styled('p')<{ loading: boolean }>`
+//   &&& {
+//     text-align: inherit;
+//     font-weight: inherit;
+//     font-family: inherit;
+//     color: inherit;
+//     margin: 0;
+//     ${({ loading }) => loading && loadingStyle}
+//   }
+// `
 
-export const Footer = styled('footer')`
-  text-align: left;
-  font-size: 12px;
-  margin: 0;
-  flex-grow: 0;
-`
+// export const Footer = styled('footer')`
+//   text-align: left;
+//   font-size: 12px;
+//   margin: 0;
+//   flex-grow: 0;
+// `
 
 export const Card = styled('a')`
   max-width: ${({ width }) => (width ? width : `100vw`)};
